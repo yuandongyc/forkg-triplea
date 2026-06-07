@@ -27,6 +27,8 @@ jobs:
           echo "release_name=$(date +%Y-%B-%d) - $BUILD_VERSION" | tee -a $GITHUB_ENV
       - name: Build Shadow JAR
         run: ./gradlew :game-headed:shadowJar
+      - name: List built JARs
+        run: find game-app/game-headed/build/libs -name "*.jar" -type f
       - name: Create Github Release
         uses: ncipollo/release-action@v1
         with:
