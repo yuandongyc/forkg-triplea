@@ -38,3 +38,5 @@ jobs:
           prerelease: true
           commit: ${{ github.sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          allowsUpdates: true
+          removeArtifacts: true
