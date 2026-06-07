@@ -1,6 +1,10 @@
 name: Package and Upload Game JAR
 on:
   workflow_dispatch:
+
+permissions:
+  contents: write
+
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
